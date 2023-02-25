@@ -8,16 +8,15 @@
 
 body {
 
-    background-color:#DAFAFC ;
+    background-color:#A093E1;
 
 }
 
-.school-courses{
-    color: darkorange;
+
 
     
 
-}
+
 #fonts{
     font-family: 'Montserrat', sans-serif;
 
@@ -25,7 +24,7 @@ body {
 }
 .flex-testing{
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 3fr 1fr ;
     gap: 20px 20px;
     
   
@@ -39,6 +38,20 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: lightpink;
+    background-color: #C2EDF5;
 }
 
+footer{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #C2EDF5;
+}
+
+a:visited{
+    color: darkgreen;
+}
+
+a:link{
+    color: red;
+}
