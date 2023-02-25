@@ -1,20 +1,21 @@
-h1 {
+ header h1{
 
     color:#0029CC;
+    
 
 
 }
 
 body {
 
-    background-color:#CCF0CC ;
+    background-color:#DAFAFC ;
 
 }
 
 .school-courses{
-    background-color: aqua;
+    color: darkorange;
 
-    text-align: center;
+    
 
 }
 #fonts{
@@ -22,3 +23,22 @@ body {
 
 
 }
+.flex-testing{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 20px 20px;
+    
+  
+
+
+
+}
+
+.headings{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: lightpink;
+}
+
