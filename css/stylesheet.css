@@ -55,3 +55,43 @@ a:visited{
 a:link{
     color: red;
 }
+
+.header_course{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: antiquewhite;
+}
+
+.section_course{
+  
+    border-bottom: 5px solid black;
+}
+
+.main-course{
+    display: flex;
+    flex-direction: column;
+}
+header ul{
+    list-style: none;
+}
+
+@media screen and (min-width:600px){
+    .main-course{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    article{
+        border-bottom: 5px solid black;
+    }
+    header ul{
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+
+}  
+
