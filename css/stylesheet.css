@@ -1,6 +1,6 @@
  header h1{
 
-    color:#0029CC;
+    color:red;
     
 
 
@@ -8,7 +8,7 @@
 
 body {
 
-    background-color:#A093E1;
+    background-color:#FAFFD1;
 
 }
 
@@ -45,15 +45,19 @@ footer{
     justify-content: center;
     align-items: center;
     display: flex;
-    background-color: #C2EDF5;
+    background-color: #C4F8C7;
+    margin-top: 60px;
+    color: red;
+    
+    
 }
 
 a:visited{
-    color: darkgreen;
+    color: darkmagenta;
 }
 
 a:link{
-    color: red;
+    color: #D818D1;
 }
 
 .header_course{
@@ -62,12 +66,13 @@ a:link{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: antiquewhite;
+    background-color: #C4F8C7;
 }
 
 .section_course{
   
     border-bottom: 5px solid black;
+    
 }
 
 .main-course{
@@ -84,14 +89,25 @@ header ul{
         grid-template-columns: 1fr 2fr;
         grid-template-rows: 1fr 1fr 1fr;
     }
-    article{
+    .border-article{
         border-bottom: 5px solid black;
+        
     }
     header ul{
         display: flex;
         flex-direction: row;
         gap: 5px;
     }
+   
+    p{
+        padding-top: 30px;
+    }
+    section{
+        margin-top: 20px;
+    }
+    .heading3{
+        padding-top: 0px;
+        }
 
 }  
 
