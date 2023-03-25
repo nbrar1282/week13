@@ -27,3 +27,6 @@ if (!courseFound) {
   courseList.push({ code: `ACIT ${userNumber}`, name: null });
   console.log(`The course with code ACIT ${userNumber} has been added to the course list.`);
 }
+
+
+
