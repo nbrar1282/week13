@@ -28,5 +28,19 @@ if (!courseFound) {
   console.log(`The course with code ACIT ${userNumber} has been added to the course list.`);
 }
 
+function CourseArray() {
+  const courses = [];
+  const articles = document.querySelectorAll("article");
+  for (const article of articles) {
+    const courseName = article.querySelector("h2").textContent;
+    const courseDate = article.querySelector("p").textContent;
+    const course = { code: courseName, date: courseDate };
+    courses.push(course);
+  }
+  console.log(courses)
+  return courses;
+ 
+}
 
+const course_list2 = CourseArray()
 
