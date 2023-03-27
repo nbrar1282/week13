@@ -44,3 +44,40 @@ function CourseArray() {
 
 const course_list2 = CourseArray()
 
+function findCourse(course_list2) {
+  let userNumber = prompt("Enter a 4-digit number:");
+
+  // Checking whether the number is valid or not
+  while (isNaN(userNumber) || userNumber.toString().length !== 4) {
+    userNumber = prompt("Invalid input. Enter a 4-digit number:");
+  }
+
+  let found = false;
+  for (const course of course_list2) {
+    if (course.code.includes(userNumber)) {
+      // If the course code includes the user number, change the background color to green
+      const article = document.getElementById(userNumber);
+      article.style.backgroundColor = "green";
+      found = true;
+    }
+  }
+
+  if (!found) {
+    // If no course is found, add a new article element with the user number as the code and "N/A" as the description
+    const newArticle = document.createElement("article");
+    const newCode = `ACIT ${userNumber} - N/A`;
+    const newDate = "Fall 2020";
+    const newContent = `
+      <a href="#"><h2>${newCode}</h2></a>
+      <p>${newDate}</p>
+      <section>Course description not available.</section>
+    `;
+    newArticle.innerHTML = newContent;
+    document.querySelector("main").appendChild(newArticle);
+  }
+}
+
+
+
+CourseArray()
+findCourse(course_list2)
