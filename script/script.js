@@ -28,6 +28,7 @@ if (!courseFound) {
   console.log(`The course with code ACIT ${userNumber} has been added to the course list.`);
 }
 
+
 function CourseArray() {
   const courses = [];
   const articles = document.querySelectorAll("article");
@@ -45,19 +46,14 @@ function CourseArray() {
 const course_list2 = CourseArray()
 
 function findCourse(course_list2) {
-  let userNumber = prompt("Enter a 4-digit number:");
-
-  // Checking whether the number is valid or not
-  while (isNaN(userNumber) || userNumber.toString().length !== 4) {
-    userNumber = prompt("Invalid input. Enter a 4-digit number:");
-  }
-
+ 
   let found = false;
   for (const course of course_list2) {
     if (course.code.includes(userNumber)) {
       // If the course code includes the user number, change the background color to green
       const article = document.getElementById(userNumber);
       article.style.backgroundColor = "green";
+      section.style.backgroundColor = "green"
       found = true;
     }
   }
@@ -65,15 +61,20 @@ function findCourse(course_list2) {
   if (!found) {
     // If no course is found, add a new article element with the user number as the code and "N/A" as the description
     const newArticle = document.createElement("article");
-    const newCode = `ACIT ${userNumber} - N/A`;
+    const newCode = `ACIT ${userNumber} `;
     const newDate = "Fall 2020";
     const newContent = `
       <a href="#"><h2>${newCode}</h2></a>
-      <p>${newDate}</p>
-      <section>Course description not available.</section>
-    `;
+      <p>${newDate}</p>`
+    const newsection = document.createElement("section")
+    
     newArticle.innerHTML = newContent;
     document.querySelector("main").appendChild(newArticle);
+    newArticle.classList.add("new_article")
+    newsection.classList.add("new_section")
+
+    newsection.textContent = "N/A"
+    document.querySelector("main").appendChild(newsection)
   }
 }
 
